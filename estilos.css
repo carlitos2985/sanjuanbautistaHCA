@@ -1,6 +1,6 @@
 /* Fondo de la página */
 body {
-    background-image: url('c:/pagina web/huariaca.jpg');
+    background-image: url('./huariaca.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
