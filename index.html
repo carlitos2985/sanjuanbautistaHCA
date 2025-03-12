@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audio Flotante</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audio Flotante</title>
+        <style>
+            /* Contenedor del reproductor de audio flotante */
+            .audio-container {
+                display: block;
+                width: 200px; /* 📌 Cambia este valor para reducir o aumentar el tamaño del reproductor */
+                padding: 5px;
+                background: rgba(0, 0, 0, 0.8);
+                position: fixed; /* Mantiene el reproductor siempre visible */
+                bottom: 20px; /* 📌 Define la distancia desde la parte inferior */
+                right: 20px; /* 📌 Define la distancia desde la derecha */
+                left: auto; /* Evita que se desplace hacia la izquierda */
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+    
+            /* Botón de cerrar (minimizar) */
+            .close-btn {
+                background: red;
+                color: white;
+                border: none;
+                padding: 5px;
+                cursor: pointer;
+                border-radius: 50%;
+                font-weight: bold;
+                width: 30px; /* 📌 Ajusta este valor para cambiar el tamaño del botón */
+                height: 30px;
+                margin-left: 5px;
+            }
+    
+            .close-btn:hover {
+                background: darkred;
+            }
+    
+            /* Cuando el reproductor está minimizado */
+            .minimized {
+                width: 50px; /* 📌 Tamaño del reproductor cuando está minimizado */
+                height: 50px;
+                padding: 5px;
+                overflow: hidden; /* Oculta elementos que no caben */
+                bottom: 20px;
+                right: 20px;
+                left: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            /* Ocultar los controles de audio cuando está minimizado */
+            .minimized audio {
+                display: none;
+            }
+    
+            /* Botón de restaurar cuando está minimizado */
+            .restore-btn {
+                display: none;
+                background: white;
+                color: black;
+                border: none;
+                padding: 5px;
+                border-radius: 50%;
+                font-size: 18px;
+                cursor: pointer;
+                width: 40px; /* 📌 Tamaño del botón de restauración */
+                height: 40px;
+            }
+    
+            /* Mostrar el botón de restaurar cuando el reproductor está minimizado */
+            .minimized .restore-btn {
+                display: block;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <div id="audioContainer" class="audio-container">
+            <button class="close-btn" onclick="toggleAudio()">×</button>
+            <button class="restore-btn" onclick="toggleAudio()">🔊</button>
+            <audio id="audioPlayer" controls autoplay>
+                <source src="mix salay.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+    
+        <script>
+            function toggleAudio() {
+                let audioContainer = document.getElementById("audioContainer");
+                audioContainer.classList.toggle("minimized");
+                
+            }
+               
+</script>
+
+        </script>
+    
+
+
+        /*BOTON FLORANTE*/ 
+          <!-- ... código existente ... -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Volver arriba">↑</button>
+
+    <script>
+        // Script existente del modal
+        function openModal(src) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Nuevo script para el botón de volver arriba
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.classList.add("visible");
+            } else {
+                scrollTopBtn.classList.remove("visible");
+            }
+        };
+
+        scrollTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+    </body>
+    </html>
+    </body>
+
+
+
+
+<!----------------------------------------------------------------- -->
+
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O&A</title>
+</head>
+<body>
+    <header>
+        <h1 class="animated-title">FESTIVIDADES DE SAN JUAN BAUTISTA 2025</h1>
+        <h2 class="animated-title">MAYORDOMOS - PRIMER DIA</h2>
+    </header>
+    <nav>
+        <a href="#seccion1" class="nav-button">Reseña Histórica</a>
+        <a href="#seccion2" class="nav-button">Raje de Leña</a>
+        <a href="#seccion3" class="nav-button">Programa</a>
+        <a href="#seccion4" class="nav-button">Galería Fotográfica</a> 
+	    <!-- <a href="#seccion5" class="nav-button">Mayordomos</a> -->
+	    <a href="#seccion6" class="nav-button">¿Cómo llegar a Huariaca?</a>
+    </nav>
+    <div class="container">
+        <div id="seccion1" class="section">
+            <h2 class="section-title">Reseña Histórica</h2>
+            <p>Reseña Historia de la Fiesta de San Juan Bautista
+La Fiesta de San Juan es la celebración más significativa del distrito de Huariaca, ubicado en la provincia de Pasco, y se le conoce también como la Fiesta Grande. Esto se debe a que San Juan es el santo patrón de la localidad. Las festividades en su honor forman parte de la Semana Turística de Huariaca, que se lleva a cabo del 22 al 27 de junio. Se dice que esta fiesta tiene una larga tradición, iniciada por un hombre llamado Dionicio Mendoza, quien celebró la primera misa para dar inicio a las festividades, con la presencia de un sacerdote apellidado Sanabria. Hoy en día, la imagen de San Juan se encuentra en la nueva Iglesia Matriz de Huariaca. La iglesia original, que data de la época colonial, fue destruida en primer lugar durante la invasión chilena en la Guerra del Pacífico, y luego, sufrió más daños por incendios y un terremoto en los años 40. La Fiesta se desarrolla en diversas fases:<br>
+<br>
+· El Corta Leña o Raja de Leña<br>
+· La Novena<br>
+· El Recibimiento<br>
+· El Alba<br>
+· El Albazo<br>
+· La Víspera<br>
+· El Baño (Rikchachicuy)<br>
+· La Misa y Procesion<br>
+· Presentacion de Bandas<br>
+· La Despedida (Ayhuallá)<br>
+· El Agradecimiento.</p>
+        
+
+
+    
+    <h2 class="section-title">Galería Fotográfica</h2>
+        <p>Haz clic en una imagen para ampliarla:</p>   
+    <div class="gallery">
+    <img src="h6.jpeg" alt="Imagen 1" onclick="openModal(this.src)">
+    </div>   
+</div>
+
+        <div id="seccion2" class="section">
+            <h2 class="section-title">Raje de Leña</h2>
+            <p>El Corta leña es la actividad inicial de la Fiesta de San Juan. Para llevar a cabo esta etapa, se hace necesario el cumplimiento de lasdonaciones prometidas el año anterior mediante la Truka o Trukay. La Truka es una antigua costumbre que consiste en la preparación de panes que sirven como monedas de compromiso. Estos panes se entregan al final de la fiesta a los familiares y amigos del encargado del año siguiente para que lo ayuden con lo necesario para la realización de la fiesta. En este caso, para el cortaleña se requiere de la donación de árboles y de mano de obra para cortar dicha leña. La responsabilidad de esta fiesta recae en tres funcionarios, uno para cada día de la fiesta. Sin embargo, en esta primera etapa de la fiesta, cada funcionario debe llevar a sus comisiones al campo para llevar a cabo el cumplimiento de esta tarea. Las comisiones están conformadas por los donantes de la leña y por los cortadores de la misma. Esta actividad no tiene una fecha definida para cada funcionario. Sin embargo, toda la leña preparada debe permanecer en la casa del funcionario por lo menos tres meses antes de la festividad para el respectivo secado de la misma. Para efectuar el cortado de la leña, los colaboradores acuden al campo con sus herramientas. Estos trabajos se llevan a cabo bajo la vigilancia del Mandador, que es el encargado del funcionario. Este personaje participa en todos los actos de la celebración. Para la realización de esta actividad se preparan bebidas como la chicha de jora y los típicos chinguiritos que son bebidas calientes de aguardiente de caña con hierbas aromáticas. Incluso se llevan músicos para amenizar esta actividad. El cortado de la leña se realiza en un solo día y no puede ser postergado. Concluido el cortado de la leña, los participantes retornan a la casa del funcionario y guardan la leña.
+            </p>
+       
+            <h2 class="section-title">Galería Fotográfica</h2>
+            <p>Haz clic en una imagen para ampliarla:</p>   
+        <div class="gallery">
+            <img src="h6.jpeg" alt="Imagen 1" onclick="openModal(this.src)">
+            <img src="h7.jpeg" alt="Imagen 2" onclick="openModal(this.src)">
+            <img src="h8.jpeg" alt="Imagen 3" onclick="openModal(this.src)">
+            <img src="h9.jpeg" alt="Imagen 4" onclick="openModal(this.src)">
+            <img src="h10.jpeg" alt="Imagen 5" onclick="openModal(this.src)">
+        </div>   
+
+</div>
+        
+        <div id="seccion3" class="section">
+            <h2 class="section-title">Programa</h2>
+            <p>Contenido de la sección 3.</p>
+        </div>
+
+        <div id="seccion4" class="section">
+            <h2 class="section-title">Galería Fotográfica de HUARIACA</h2>
+            <p>Haz clic en una imagen para ampliarla:</p>
+            <div class="gallery">
+                <img src="h1.jpg" alt="Imagen 1" onclick="openModal(this.src)">
+                <img src="h2.jpg" alt="Imagen 2" onclick="openModal(this.src)">
+                <img src="h3.jpg" alt="Imagen 3" onclick="openModal(this.src)">
+                <img src="h4.jpg" alt="Imagen 4" onclick="openModal(this.src)">
+                <img src="h5.jpg" alt="Imagen 5" onclick="openModal(this.src)">
+            </div>
+        </div>
+    </div>
+
+            <div id="seccion6" class="section">
+                <h2 class="section-title">Viajando a HUARIACA</h2>
+                <p>Ruta Lima - Huariaca/Pasco:</p>
+                <iframe 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2003470.7199896935!2d-77.79658653841857!3d-11.25929530285221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x9105c3ec2c29e1df%3A0xa9a14eed92331144!2sLima%2C%20Provincia%20de%20Lima!3m2!1d-12.0779798!2d-76.8720961!4m5!1s0x910818e41ab86bf3%3A0x470a9e7f2d3174c1!2sHuariaca!3m2!1d-10.444015199999999!2d-76.1885171!5e0!3m2!1ses!2spe!4v1739750814468!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+               
+                <!--fotos
+                <div class="gallery">
+                <img src="h1.jpg" alt="Imagen 1" onclick="openModal(this.src)">
+                </div>
+            </div> -->
+    
+    <!-- Modal para imagen ampliada -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <footer>
+        <p>Creado por SILSA</p>
+    </footer>
+    
+     <script>
+        function openModal(src) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script> 
+
+
+
+    
+</body>
+</html>
