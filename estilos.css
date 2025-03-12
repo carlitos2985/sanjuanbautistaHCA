@@ -212,7 +212,7 @@ iframe {
     --secondary-red: #ff6b6b;
     --dark-red: #c41e3a;
 }
-/*BOTON FLOTANTE*/
+/* BOTON FLOTANTE */
 .scroll-top-btn {
     position: fixed;
     bottom: 80px;
