@@ -63,7 +63,6 @@ header {
     text-align: center;
     padding: 2rem 20px;
     /* Modificación del header (banner) */
-
     background: linear-gradient(45deg, rgba(255, 51, 102, 0.4), rgba(255, 107, 107, 0.4));
     padding: 2rem;
     text-align: center;
@@ -100,7 +99,6 @@ iframe {
     display: block;
     margin: 0 auto;
 }
-
 
 @keyframes bounce {
     0%, 100% {
@@ -349,6 +347,11 @@ iframe {
         bottom: 60px;
         right: 10px;
     }
+
+    /* Ajuste del header (banner) en móviles */
+    header {
+        padding: 1rem 10px;
+    }
 }
 
 /* Para pantallas muy pequeñas */
@@ -364,5 +367,10 @@ iframe {
 
     .gallery img {
         width: 100px;
+    }
+
+    /* Ajuste del header (banner) en pantallas muy pequeñas */
+    header {
+        padding: 0.5rem 5px;
     }
 }
