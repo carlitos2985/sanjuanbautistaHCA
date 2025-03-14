@@ -1,6 +1,6 @@
 /* Fondo de la página */
 body {
-    background-image: url('./huariaca.jpg');
+    background-image: url('c:/pagina web/huariaca.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -63,6 +63,7 @@ header {
     text-align: center;
     padding: 2rem 20px;
     /* Modificación del header (banner) */
+
     background: linear-gradient(45deg, rgba(255, 51, 102, 0.4), rgba(255, 107, 107, 0.4));
     padding: 2rem;
     text-align: center;
@@ -99,6 +100,7 @@ iframe {
     display: block;
     margin: 0 auto;
 }
+
 
 @keyframes bounce {
     0%, 100% {
@@ -210,7 +212,7 @@ iframe {
     --secondary-red: #ff6b6b;
     --dark-red: #c41e3a;
 }
-/* BOTON FLOTANTE */
+/*BOTON FLOTANTE*/
 .scroll-top-btn {
     position: fixed;
     bottom: 80px;
@@ -314,63 +316,71 @@ iframe {
 /* Ajustes responsivos para el contenido */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 0 10px;
+        padding: 0 15px;
+        width: 100%;
     }
 
     .section {
-        margin: 1rem;
-        padding: 1rem;
+        margin: 1rem 10px;
+        padding: 1.5rem;
     }
 
     .animated-title {
-        font-size: 2em;
+        font-size: 1.8em;
+        margin-bottom: 1rem;
     }
 
     .nav-button {
-        padding: 8px 16px;
+        padding: 10px 15px;
         font-size: 1em;
+        width: calc(50% - 20px);
+        text-align: center;
+    }
+
+    /* Mejora de la galería en móviles */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+    }
+
+    /* Ajustes del reproductor y botón flotante */
+    .audio-container {
+        width: 120px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .scroll-top-btn {
+        bottom: 70px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .animated-title {
+        font-size: 1.5em;
+    }
+
+    .nav-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .section {
+        margin: 0.5rem 5px;
+        padding: 1rem;
     }
 
     .gallery img {
         width: 120px;
     }
 
-    /* Ajuste del reproductor de audio en móviles */
-    .audio-container {
-        width: 150px;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    /* Ajuste del botón flotante en móviles */
-    .scroll-top-btn {
-        bottom: 60px;
-        right: 10px;
-    }
-
-    /* Ajuste del header (banner) en móviles */
-    header {
-        padding: 1rem 10px;
-    }
-}
-
-/* Para pantallas muy pequeñas */
-@media screen and (max-width: 480px) {
-    .animated-title {
-        font-size: 1.8em;
-    }
-
-    .section {
-        margin: 0.5rem;
-        padding: 0.8rem;
-    }
-
-    .gallery img {
-        width: 100px;
-    }
-
-    /* Ajuste del header (banner) en pantallas muy pequeñas */
-    header {
-        padding: 0.5rem 5px;
+    /* Ajuste del texto para mejor legibilidad */
+    .section p {
+        font-size: 0.95em;
+        line-height: 1.6;
     }
 }
