@@ -112,9 +112,8 @@
     
 
 
-        /*BOTON FLORANTE*/ 
-          <!-- ... código existente ... -->
-    <button class="scroll-top-btn" id="scrollTopBtn" title="Volver arriba">↑</button>
+        
+          <button class="scroll-top-btn" id="scrollTopBtn" title="Volver arriba">↑</button>
 
     <script>
         // Script existente del modal
@@ -148,11 +147,9 @@
     </body>
     </html>
     </body>
+    
 
 
-
-
-<!----------------------------------------------------------------- -->
 
     <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
@@ -169,8 +166,8 @@
         <a href="#seccion2" class="nav-button">Raje de Leña</a>
         <a href="#seccion3" class="nav-button">Programa</a>
         <a href="#seccion4" class="nav-button">Galería Fotográfica</a> 
-	    <!-- <a href="#seccion5" class="nav-button">Mayordomos</a> -->
-	    <a href="#seccion6" class="nav-button">¿Cómo llegar a Huariaca?</a>
+        <a href="#seccion5" class="nav-button">Videos</a>
+        <a href="#seccion6" class="nav-button">¿Cómo llegar a Huariaca?</a>
     </nav>
     <div class="container">
         <div id="seccion1" class="section">
@@ -208,33 +205,75 @@ La Fiesta de San Juan es la celebración más significativa del distrito de Huar
             <h2 class="section-title">Galería Fotográfica</h2>
             <p>Haz clic en una imagen para ampliarla:</p>   
         <div class="gallery">
-            <img src="h6.jpeg" alt="Imagen 1" onclick="openModal(this.src)">
-            <img src="h7.jpeg" alt="Imagen 2" onclick="openModal(this.src)">
-            <img src="h8.jpeg" alt="Imagen 3" onclick="openModal(this.src)">
-            <img src="h9.jpeg" alt="Imagen 4" onclick="openModal(this.src)">
-            <img src="h10.jpeg" alt="Imagen 5" onclick="openModal(this.src)">
+            <img src="./imagenes/h6.jpeg" alt="Imagen 1" onclick="openModal(this.src)">
+            <img src="./imagenes/h7.jpeg" alt="Imagen 2" onclick="openModal(this.src)">
+            <img src="./imagenes/h8.jpeg" alt="Imagen 3" onclick="openModal(this.src)">
+            <img src="./imagenes/h9.jpeg" alt="Imagen 4" onclick="openModal(this.src)">
+            <img src="./imagenes/h10.jpeg" alt="Imagen 5" onclick="openModal(this.src)">
         </div>   
 
 </div>
         
         <div id="seccion3" class="section">
-            <h2 class="section-title">Programa</h2>
-            <p>Contenido de la sección 3.</p>
-        </div>
-
+            <h2 class="section-title">Programa de Festividades</h2>
+            <div class="programa-container">
+                <button class="nav-btn prev-btn" onclick="cambiarDia(-1)">←</button>
+                <button class="nav-btn next-btn" onclick="cambiarDia(1)">→</button>
+                
+                <div class="dias-container">
+                    <div class="dia-festivo" data-dia="1">
+                        <h3>Primer Día - 22 de Junio</h3>
+                        <ul class="programa-lista">
+                            <li>🌅 5:00 AM - Pishtacuy de los ganados en el camal Municipal.</li>
+                            </ul>
+                    </div>
+                
+                    <div class="dia-festivo" data-dia="2" style="display: none;">
+                        <h3>Segundo Día - 23 de Junio</h3>
+                        <ul class="programa-lista">
+                            <li>🍽️ - Desayuno. Entre familiares, servicios y visitantes.</li>
+                            <li>🍖 - Almuerzo. Entre familiares, servicios, visitantes y bandas de músicos.</li>
+                            <li>🎺 - 12:00 PM. Entrada de los Mayordomos del PRIMER DÍA ("CHRISTIAN BALDEON TALLEDO, MAGALY RICRA"), acompañado del distrito ecológico de Huariaca para saludar y agradecer a nuestro Santo Patrón San Juan Bautista, posterior el recorrido por las principales calles de nuestra localidad.</li>
+                            <li>🎺 - 3:00 PM. Recepción y entrada, bandas de músicos: </li>
+                            <li>🎆 8:00 PM  - Noche de Gala</li>
+                        </ul>
+                    </div>
+                
+                    <div class="dia-festivo" data-dia="3" style="display: none;">
+                        <h3>Tercer Día - 24 de Junio</h3>
+                        <ul class="programa-lista">
+                            <li>🌞 10:00 AM - Actividades Deportivas</li>
+                            <li>🎨 2:00 PM - Festival Cultural</li>
+                            <li>🎵 4:00 PM - Concurso de Bandas</li>
+                            <li>💃 8:00 PM - Baile Popular</li>
+                        </ul>
+                    </div>
+                
+                    <div class="dia-festivo" data-dia="4" style="display: none;">
+                        <h3>Cuarto Día - 25 de Junio</h3>
+                        <ul class="programa-lista">
+                            <li>🎭 11:00 AM - Danzas Típicas</li>
+                            <li>🍖 2:00 PM - Gran Pachamanca</li>
+                            <li>🎉 5:00 PM - Ceremonia de Clausura</li>
+                            <li>🌙 8:00 PM - Despedida (Ayhuallá)</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>    
         <div id="seccion4" class="section">
-            <h2 class="section-title">Galería Fotográfica de HUARIACA</h2>
-            <p>Haz clic en una imagen para ampliarla:</p>
-            <div class="gallery">
-                <img src="h1.jpg" alt="Imagen 1" onclick="openModal(this.src)">
-                <img src="h2.jpg" alt="Imagen 2" onclick="openModal(this.src)">
-                <img src="h3.jpg" alt="Imagen 3" onclick="openModal(this.src)">
-                <img src="h4.jpg" alt="Imagen 4" onclick="openModal(this.src)">
-                <img src="h5.jpg" alt="Imagen 5" onclick="openModal(this.src)">
+                <h2 class="section-title">Galería Fotográfica de HUARIACA</h2>
+                <p>Haz clic en una imagen para ampliarla:</p>
+                <div class="gallery">
+                    <img src="./imagenes/h1.jpg" alt="Imagen 1" onclick="openModal(this.src)">
+                    <img src="./imagenes/h2.jpg" alt="Imagen 2" onclick="openModal(this.src)">
+                    <img src="./imagenes/h3.jpg" alt="Imagen 3" onclick="openModal(this.src)">
+                    <img src="./imagenes/h4.jpg" alt="Imagen 4" onclick="openModal(this.src)">
+                    <img src="./imagenes/h5.jpg" alt="Imagen 5" onclick="openModal(this.src)">
+                </div>
             </div>
         </div>
-    </div>
-
+        </div>
             <div id="seccion6" class="section">
                 <h2 class="section-title">Viajando a HUARIACA</h2>
                 <p>Ruta Lima - Huariaca/Pasco:</p>
@@ -259,9 +298,7 @@ La Fiesta de San Juan es la celebración más significativa del distrito de Huar
         <img class="modal-content" id="modalImage">
     </div>
     
-    <footer>
-        <p>Creado por SILSA</p>
-    </footer>
+   
     
      <script>
         function openModal(src) {
@@ -279,3 +316,294 @@ La Fiesta de San Juan es la celebración más significativa del distrito de Huar
     
 </body>
 </html>
+
+<!-- Actualizar el estilo de la galería -->
+<style>
+    .gallery {
+        display: flex;
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .gallery img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: opacity 1.5s ease;
+    }
+
+    .gallery img.active {
+        display: block;
+    }
+
+    .gallery-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 5px;
+        z-index: 2;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+</style>
+
+<!-- Agregar el script para el carrusel -->
+<script>
+    function initGallery(galleryId) {
+        const gallery = document.getElementById(galleryId);
+        const images = gallery.querySelectorAll('img');
+        let currentIndex = 0;
+        let interval;
+
+        // Agregar botones de navegación
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'gallery-btn gallery-prev';
+        prevBtn.innerHTML = '←';
+        
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'gallery-btn gallery-next';
+        nextBtn.innerHTML = '→';
+
+        gallery.appendChild(prevBtn);
+        gallery.appendChild(nextBtn);
+
+        // Mostrar primera imagen
+        images[0].classList.add('active');
+
+        function showImage(index) {
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Eventos de los botones
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+
+        // Carrusel automático
+        interval = setInterval(nextImage, 3000);
+
+        // Pausar al pasar el mouse
+        gallery.addEventListener('mouseenter', () => clearInterval(interval));
+        gallery.addEventListener('mouseleave', () => {
+            interval = setInterval(nextImage, 5000);
+        });
+    }
+
+    // Inicializar todas las galerías cuando carga la página
+    window.addEventListener('load', () => {
+        const galleries = document.querySelectorAll('.gallery');
+        galleries.forEach((gallery, index) => {
+            gallery.id = `gallery${index + 1}`;
+            initGallery(gallery.id);
+        });
+    });
+</script>
+</div>
+<!-- Agregar antes del footer -->
+<div id="seccion5" class="section">
+    <h2 class="section-title">Videos de la Festividad</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/qoZ8bnZ3i9Q" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/qoZ8bnZ3i9Q" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<!-- Agregar en la sección de estilos dentro del <head> -->
+<style>
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .programa-lista li {
+        padding: 10px;
+        margin: 5px 0;
+        background: rgba(255,255,255,0.7);
+        border-radius: 8px;
+        transition: background 0.3s ease;
+        text-align: justify;
+        line-height: 1.5;
+    }
+</style>
+
+<!-- Agregar estos estilos -->
+<style>
+    .gallery {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .gallery-container {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .gallery img {
+        min-width: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute;
+    }
+
+    .gallery img.active {
+        opacity: 1;
+        position: relative;
+    }
+
+    .gallery-nav {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        z-index: 2;
+    }
+
+    .gallery-nav button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+    }
+
+    .gallery-nav button.active {
+        background: white;
+    }
+</style>
+
+<!-- Modificar la sección de script -->
+<script>
+    let diaActual = 1;
+    const totalDias = 4;
+
+    function cambiarDia(direccion) {
+        const nuevoDia = diaActual + direccion;
+        
+        if (nuevoDia >= 1 && nuevoDia <= totalDias) {
+            // Ocultar día actual
+            document.querySelector(`[data-dia="${diaActual}"]`).style.display = 'none';
+            
+            // Mostrar nuevo día
+            document.querySelector(`[data-dia="${nuevoDia}"]`).style.display = 'block';
+            
+            diaActual = nuevoDia;
+            
+            // Actualizar estado de botones
+            document.querySelector('.prev-btn').disabled = diaActual === 1;
+            document.querySelector('.next-btn').disabled = diaActual === totalDias;
+        }
+    }
+
+    // Inicializar estado de botones cuando carga la página
+    window.addEventListener('load', () => {
+        document.querySelector('.prev-btn').disabled = true;
+        document.querySelector('.next-btn').disabled = false;
+    });
+</script>
+
+<!-- Modificar las galerías existentes agregando IDs únicos -->
+<div class="gallery" id="gallery1">
+    <!-- ... imágenes existentes ... -->
+</div>
+
+<div class="gallery" id="gallery2">
+    <!-- ... imágenes existentes ... -->
+</div>
+
+<!-- Agregar el estilo del banner -->
+<style>
+    .footer-banner {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .footer-banner .copyright {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .footer-banner .contact {
+        font-size: 16px;
+        color: #ffd700;
+    }
+</style>
+
+<!-- Reemplazar el footer existente con el nuevo banner -->
+<div class="footer-banner">
+    <div class="copyright">
+        © @SILSA.COM - DERECHOS RESERVADOS
+    </div>
+    <div class="contact">
+        CONTACTOS: 964240168 - HUÁNUCO PERÚ
+    </div>
+</div>
